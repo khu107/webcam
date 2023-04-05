@@ -27,9 +27,7 @@ export default function WebcamImage() {
             screenshotFormat="image/jpeg"
             videoConstraints={videoConstraints}
           />
-          <Button variant="light" onClick={capture}>
-            Capture photo
-          </Button>
+          <Button className="btn" variant="primary" onClick={capture}></Button>
         </>
       ) : (
         <>
@@ -37,7 +35,7 @@ export default function WebcamImage() {
           <Button variant="light" onClick={() => setImg(null)}>
             Retake
           </Button>
-          <h1 className="text-xl font-bold underline">Hello world!</h1>
+          <h1>Hello world!</h1>
         </>
       )}
     </div>
