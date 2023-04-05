@@ -3,7 +3,6 @@
   justify-content: center;
   border: 1px solid red;
   background: #000;
-  height: 100vh;
 }
 .camera {
   position: relative;
@@ -15,7 +14,6 @@
 }
 .webcam {
   position: relative;
-  height: 600px;
 }
 .btn {
   position: absolute;
