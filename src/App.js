@@ -4,7 +4,7 @@ import WebcamImage from './WebcamImage';
 
 function App() {
   return (
-    <div className="sm:container sm:mx-auto">
+    <div className="border-2 border-indigo-600 flex justify-center h-screen ">
       <WebcamImage />
     </div>
   );

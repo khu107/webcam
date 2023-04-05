@@ -20,10 +20,10 @@ export default function WebcamImage() {
       {img === null ? (
         <>
           <Webcam
+            className=""
             audio={false}
             mirrored={false}
-            height={200}
-            width={200}
+            width={678}
             ref={webcamRef}
             screenshotFormat="image/jpeg"
             videoConstraints={videoConstraints}
