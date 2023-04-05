@@ -1,20 +1,35 @@
 .app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 720px;
-  height: 420px;
   margin: 0 auto;
+  width: 720px;
+  border: 1px solid red;
+  box-sizing: border-box;
 }
 .camera {
-  display: flex;
-  border: 1px solid red;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  width: 100%;
 }
 .webcam {
 }
 .btn {
-  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  color: white;
+}
+
+@media only screen and (max-device-width: 640px) {
+  .camera {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+}
+@media only screen and (max-device-width: 768px) {
+  .camera {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
 }
