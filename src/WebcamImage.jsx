@@ -16,30 +16,36 @@ export default function WebcamImage() {
     setImg(imageSrc);
   }, [webcamRef]);
   return (
-    <div className="camera">
-      {img === null ? (
-        <>
-          <Webcam
-            className="webcam"
-            audio={false}
-            mirrored={false}
-            ref={webcamRef}
-            screenshotFormat="image/jpeg"
-            videoConstraints={videoConstraints}
-          />
-          <Button className="btn" variant="primary" onClick={capture}>
-            click
-          </Button>
-        </>
-      ) : (
-        <>
-          <img src={img} alt="screenshot" />
-          <Button variant="light" onClick={() => setImg(null)}>
-            Retake
-          </Button>
-          <img src={img} width={200} height={200} alt="" srcset="" />
-        </>
+    <>
+      <div className="camera">
+        {img === null ? (
+          <>
+            <Webcam
+              className="webcam"
+              audio={false}
+              mirrored={false}
+              ref={webcamRef}
+              screenshotFormat="image/jpeg"
+              videoConstraints={videoConstraints}
+            />
+            <Button className="btn" variant="primary" onClick={capture}>
+              click
+            </Button>
+          </>
+        ) : (
+          <>
+            <Button variant="light" onClick={() => setImg(null)}>
+              Retake
+            </Button>
+            <img src={img} alt="" srcset="" />
+          </>
+        )}
+      </div>
+      {img && (
+        <div>
+          <h2>result: benign</h2>
+        </div>
       )}
-    </div>
+    </>
   );
 }
