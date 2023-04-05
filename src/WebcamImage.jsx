@@ -8,8 +8,6 @@ export default function WebcamImage() {
   const webcamRef = useRef(null);
 
   const videoConstraints = {
-    width: 719,
-    height: 800,
     facingMode: 'environment',
   };
 
