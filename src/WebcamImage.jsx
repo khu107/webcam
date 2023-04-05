@@ -34,7 +34,7 @@ export default function WebcamImage() {
           </>
         ) : (
           <>
-            <Button variant="light" onClick={() => setImg(null)}>
+            <Button variant="primary" onClick={() => setImg(null)}>
               Retake
             </Button>
             <img src={img} alt="" srcset="" />
