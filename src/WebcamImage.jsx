@@ -8,7 +8,7 @@ export default function WebcamImage() {
   const videoConstraints = {
     width: 420,
     height: 420,
-    facingMode: 'user',
+    facingMode: 'environment',
   };
 
   const capture = useCallback(() => {
