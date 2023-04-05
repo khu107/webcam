@@ -40,12 +40,13 @@ export default function WebcamImage() {
             <img src={img} alt="" srcset="" />
           </>
         )}
+        {img && (
+          <div>
+            <h3>result: benign</h3>
+            <h3>name: teng teng teng</h3>
+          </div>
+        )}
       </div>
-      {img && (
-        <div>
-          <h2>result: benign</h2>
-        </div>
-      )}
     </>
   );
 }
