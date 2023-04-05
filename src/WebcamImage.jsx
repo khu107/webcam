@@ -6,8 +6,8 @@ export default function WebcamImage() {
   const webcamRef = useRef(null);
 
   const videoConstraints = {
-    width: 420,
-    height: 420,
+    width: 500,
+    height: 1200,
     facingMode: 'environment',
   };
 
@@ -23,7 +23,8 @@ export default function WebcamImage() {
             className=""
             audio={false}
             mirrored={false}
-            width={678}
+            height={100 + '%'}
+            width={100 + '%'}
             ref={webcamRef}
             screenshotFormat="image/jpeg"
             videoConstraints={videoConstraints}
