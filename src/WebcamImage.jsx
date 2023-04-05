@@ -21,7 +21,7 @@ export default function WebcamImage() {
         <>
           <Webcam
             audio={false}
-            mirrored={true}
+            mirrored={false}
             height={200}
             width={200}
             ref={webcamRef}
