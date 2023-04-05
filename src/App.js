@@ -1,6 +1,6 @@
 import './App.css';
 import Register from './Register';
-import WebcamImage from './WebcamImage';
+// import WebcamImage from './WebcamImage';
 
 function App() {
   return (
