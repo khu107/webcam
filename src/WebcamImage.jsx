@@ -1,13 +1,13 @@
 import React from 'react';
 import Webcam from 'react-webcam';
+import Button from 'react-bootstrap/Button';
+
 import { useCallback, useRef, useState } from 'react';
 export default function WebcamImage() {
   const [img, setImg] = useState(null);
   const webcamRef = useRef(null);
 
   const videoConstraints = {
-    width: 500,
-    height: 1200,
     facingMode: 'environment',
   };
 
@@ -16,25 +16,27 @@ export default function WebcamImage() {
     setImg(imageSrc);
   }, [webcamRef]);
   return (
-    <div className="">
+    <div className="camera">
       {img === null ? (
         <>
           <Webcam
-            className=""
+            className="webcam"
             audio={false}
             mirrored={false}
-            height={100 + '%'}
-            width={100 + '%'}
             ref={webcamRef}
             screenshotFormat="image/jpeg"
             videoConstraints={videoConstraints}
           />
-          <button onClick={capture}>Capture photo</button>
+          <Button variant="light" onClick={capture}>
+            Capture photo
+          </Button>
         </>
       ) : (
         <>
           <img src={img} alt="screenshot" />
-          <button onClick={() => setImg(null)}>Retake</button>
+          <Button variant="light" onClick={() => setImg(null)}>
+            Retake
+          </Button>
           <h1 className="text-xl font-bold underline">Hello world!</h1>
         </>
       )}

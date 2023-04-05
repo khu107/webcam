@@ -4,8 +4,10 @@ import WebcamImage from './WebcamImage';
 
 function App() {
   return (
-    <div className="border-2 border-indigo-600 flex justify-center h-screen ">
-      <WebcamImage />
+    <div className="container">
+      <div className="app">
+        <WebcamImage />
+      </div>
     </div>
   );
 }
