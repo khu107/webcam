@@ -22,12 +22,15 @@ export default function WebcamImage() {
           <Webcam
             className="webcam"
             audio={false}
+            height={400}
             mirrored={false}
             ref={webcamRef}
             screenshotFormat="image/jpeg"
             videoConstraints={videoConstraints}
           />
-          <Button className="btn" variant="primary" onClick={capture}></Button>
+          <Button className="btn" variant="primary" onClick={capture}>
+            click
+          </Button>
         </>
       ) : (
         <>
